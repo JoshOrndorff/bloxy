@@ -1,0 +1,12 @@
+body {
+  background-color: #fff;
+  font-family: sans-serif;
+}
+#output {
+  font-family: monospace;
+  white-space: pre; /* For json prettiness */
+}
+h1 {
+  font-weight: normal;
+  font-size: 140%;
+}

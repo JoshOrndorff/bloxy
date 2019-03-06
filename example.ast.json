@@ -1,0 +1,54 @@
+new x in {
+  x!(5) |
+  for (y <- x){
+    y!(Nil)
+  }
+}
+
+
+[
+  {
+    tag: "new",
+    binds: [
+      "x"
+    ],
+    body: [
+      {
+        tag: "send",
+        chan: {
+          tag: "var",
+          givenName: "x"
+        },
+        message: {
+          tag: "ground",
+          type: "int",
+          val: "5"
+        }
+      },
+      {
+        tag: "join",
+        actions:[
+          {
+            chan: {
+              tag: "var",
+              givenName: "x"
+            },
+            bind: "y"
+          }
+        ],
+        body: {
+          tag: "send",
+          chan: {
+            tag: "var",
+            givenName: "y"
+          },
+          message: {
+            tag: "ground",
+            type: "nil",
+            val: "Nil"
+          }
+        }
+      }
+    ]
+  }
+]

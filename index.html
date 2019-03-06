@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Rho Blox -- Visual Programming for Rholang</title>
+  <script src="blockly/blockly_compressed.js"></script>
+  <script src="blockly/rhoBlocks.js"></script>
+  <script src="blockly/rhoAST.js"></script>
+  <script src="blockly/coopRholang.js"></script>
+  <script src="blockly/msg-en.js"></script>
+  <script src="application.js"></script>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+  <h1>Rho Blox</h1>
+  <p class="subtitle">Visual Programming for Rholang</p>
+
+  <p><a href="https://developers.google.com/blockly/">Blockly Docs</a> are available to hack on this project. Make sure your blocks are all connected.</p>
+
+  <div id="rhoBlocks" style="height: 400px; width: 800px;"></div>
+
+  <xml xmlns="http://www.w3.org/1999/xhtml" id="toolbox" style="display: none;">
+    <!--category name="Rholang" colour="#6d5ba5"-->
+      <block type="nil"></block>
+      <block type="send"></block>
+      <block type="receive"></block>
+      <block type="new"></block>
+    <!--/category>
+    <category name="Ground">
+      <block type="logic_compare"></block>
+      <block type="math_number">
+        <field name="NUM">123</field>
+      </block>
+      <block type="text"></block>
+    </category-->
+  </xml>
+
+  <button id="genAST">Generate Rholang AST</button>
+  <button id="genCR">Generate Rholang AST</button>
+  <div id="output">No AST Generated Yet</div>
+
+
+</body>
+</html>
