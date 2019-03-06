@@ -34,12 +34,23 @@ Blockly.RhoAST.scrub_ = function(block, code, opt_thisOnly) {
 
   let thisAST = JSON.parse(code);
   let nextAST = JSON.parse(nextCode);
-  let ast = {
-    tag: 'par',
-    left: thisAST,
-    right: nextAST
-  };
-  return JSON.stringify(ast, null, 2);
+  let combinedAST;
+  if (nextAST.tag !== "par") {
+    combinedAST = {
+      tag: 'par',
+      procs: [
+        thisAST,
+        nextAST,
+      ],
+    };
+  }
+  else {
+    combinedAST = {
+      tag: 'par',
+      procs: nextAST.procs.concat([thisAST])
+    };
+  }
+  return JSON.stringify(combinedAST, null, 2);
 };
 
 
