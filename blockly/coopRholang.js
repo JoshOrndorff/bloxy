@@ -7,6 +7,16 @@ Blockly.CoopRholang.ORDER_ATOMIC = 0;             // 0 "" ...
 Blockly.CoopRholang.ORDER_NEW = 1;                // new
 Blockly.CoopRholang.ORDER_OVERRIDES = [];
 
+/**
+ * Hook for code to run at end of code generation.
+ * All top-level bloxy stacks are considered parred together
+ * so just add par bars
+ * @param {string array} code Generated code from top-level stacks.
+ * @return {string} Completed code.
+ */
+Blockly.CoopRholang.finish = function(code) {
+  return code.join(' |\n')
+};
 
 /**
  * Common tasks for generating Rholang from blocks.

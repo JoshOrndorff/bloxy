@@ -9,6 +9,23 @@ Blockly.RhoAST.ORDER_OVERRIDES = [];
 
 
 /**
+ * Hook for code to run at end of code generation.
+ * All top-level bloxy stacks are considered parred together, so
+ * wrap the comma-seperated list in the rest of the AST.
+ * @param {string array} code Generated code from top-level stacks.
+ * @return {string} Completed code.
+ */
+Blockly.RhoAST.finish = function(code) {
+  let ast = {
+    tag: 'par',
+    procs: code.map(JSON.parse)
+  };
+  return JSON.stringify(ast, null, 2);
+};
+
+
+
+/**
  * Common tasks for generating Rholang from blocks.
  * May someday handle comments for the specified block and any connected value blocks.
  * Calls any statements following this block.
