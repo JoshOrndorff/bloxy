@@ -59,3 +59,8 @@ Blockly.CoopRholang['new'] = function(block) {
   let body = Blockly.CoopRholang.statementToCode(block, 'body');
   return `new ${bind} in {\n${body}\n}`;
 }
+
+Blockly.CoopRholang['var'] = function(block) {
+  let givenName = block.getFieldValue('name');
+  return `*${givenName}`;
+}

@@ -93,3 +93,12 @@ Blockly.RhoAST['new'] = function(block) {
   };
   return JSON.stringify(ast, null, 2);
 }
+
+Blockly.RhoAST['var'] = function(block) {
+  let givenName = block.getFieldValue('name');
+  let ast = {
+    tag: 'var',
+    givenName,
+  };
+  return JSON.stringify(ast, null, 2);
+}

@@ -301,4 +301,47 @@
         <field name="HUE">230</field>
       </block>
     </value>
+  </block><block type="factory_base" id="#sp2IMXMq`O)7@LO:[bv" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">var</field>
+    <field name="INLINE">AUTO</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_dummy" id="dSOc`q,$q,+F{yQ6GN.|">
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_static" id="`!XB+WUSM#Yo(zj#x/aQ">
+            <field name="TEXT">*</field>
+            <next>
+              <block type="field_input" id="?4bz]]S!m3S,*^^N=hpU">
+                <field name="TEXT">x</field>
+                <field name="FIELDNAME">name</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="=6tp_-$O#C!LrAnVS8BB" deletable="false" movable="false">
+        <field name="TEXT">Variable Mention</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="Lr!$RVZFTE($9WKv=b*m" deletable="false" movable="false">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="QQHdD*]L^dzR_@^0HEp3"></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id=")}]QPv8Ej+rTp1.4Z1m-"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="|#Lu%O8_(GX!9LR[KN-U">
+        <mutation colour="#5b67a5"></mutation>
+        <field name="HUE">230</field>
+      </block>
+    </value>
   </block></xml>

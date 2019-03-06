@@ -63,3 +63,16 @@ Blockly.Blocks['new'] = {
  this.setHelpUrl("");
   }
 };
+
+Blockly.Blocks['var'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("*")
+        .appendField(new Blockly.FieldTextInput("x"), "name");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(230);
+ this.setTooltip("Variable Mention");
+ this.setHelpUrl("");
+  }
+};
